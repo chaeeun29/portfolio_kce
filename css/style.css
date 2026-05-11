@@ -1,0 +1,38 @@
+body, ul, li {
+  margin: 0; padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* 라이브러리 - 폰트 */
+
+/* 포트 - Cormorant Garamond */
+.cormorant-garamond-<uniquifier> {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.sec {
+  background-color: #FAFAFA;
+  font-family: "Cormorant Garamond", serif;
+}
