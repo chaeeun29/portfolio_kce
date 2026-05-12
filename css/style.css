@@ -24,15 +24,439 @@ button {
 
 /* 라이브러리 - 폰트 */
 
-/* 포트 - Cormorant Garamond */
-.cormorant-garamond-<uniquifier> {
-  font-family: "Cormorant Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+/* 폰트 - pretendard */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
 }
 
-.sec {
-  background-color: #FAFAFA;
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+}
+
+.en {
   font-family: "Cormorant Garamond", serif;
+  letter-spacing: -0.01em;
+   line-height: 1;
+}
+
+.ko {
+  font-family: "Noto Serif KR", serif;
+  letter-spacing: -0.01em;
+   line-height: 1;
+}
+
+/* 커스텀 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 헤더 -고정 */
+header {
+  height: 100px;
+  width: 100%;
+  background-color: #E6ECF0;
+  color: #513B29;
+  padding: 20px 150px;
+  box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  backdrop-filter: blur(12px);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo img {
+  animation: rotateLogo 14s linear infinite;
+}
+
+@keyframes rotateLogo {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.header__nav a {
+  opacity: 0.55;
+  transition: all 0.3s ease;
+}
+
+.header__nav a.is-active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+/* 메인 */
+section {
+  scroll-margin-top: 100px;
+  background-color: #FAFAFA;
+  padding: 100px 150px;
+  color: #513B29;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+ padding: 200px 150px;
+ box-sizing: border-box;
+}
+
+.cover__folder {
+  display: block;
+  width: 580px;
+  animation: folderIntro 1s ease forwards;
+}
+
+@keyframes folderIntro {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.cover__folder img {
+  width: 100%;
+  display: block;
+  
+  transition: transform 0.4s ease;
+}
+
+.cover__folder img:hover {
+  transform: translateY(-8px);
+}
+
+
+
+.cover__title .title {
+  display: flex;
+  align-items: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 180px;
+  font-weight: 500;
+}
+
+.cover__title .title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: titleReveal 0.45s ease forwards;
+}
+
+/* (2026) 과 PORTFOLIO 사이 간격 */
+.cover__title .title .space {
+  width: 20px;
+}
+
+/* 순차 등장 */
+.cover__title .title span:nth-child(1) { animation-delay: 0.6s; }
+.cover__title .title span:nth-child(2) { animation-delay: 0.65s; }
+.cover__title .title span:nth-child(3) { animation-delay: 0.7s; }
+.cover__title .title span:nth-child(4) { animation-delay: 0.75s; }
+.cover__title .title span:nth-child(5) { animation-delay: 0.8s; }
+.cover__title .title span:nth-child(6) { animation-delay: 0.85s; }
+.cover__title .title span:nth-child(7) { animation-delay: 0.9s; }
+
+.cover__title .title span:nth-child(8) { animation-delay: 0.95s; }
+.cover__title .title span:nth-child(9) { animation-delay: 1s; }
+.cover__title .title span:nth-child(10) { animation-delay: 1.05s; }
+.cover__title .title span:nth-child(11) { animation-delay: 1.1s; }
+.cover__title .title span:nth-child(12) { animation-delay: 1.15s; }
+.cover__title .title span:nth-child(13) { animation-delay: 1.2s; }
+.cover__title .title span:nth-child(14) { animation-delay: 1.25s; }
+.cover__title .title span:nth-child(15) { animation-delay: 1.3s; }
+.cover__title .title span:nth-child(16) { animation-delay: 1.35s; }
+
+@keyframes titleReveal {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 프로필 페이지 - #about */
+.about {
+  display: flex;
+  gap: 100px;
+  position: relative;
+}
+
+.about > .quote {
+  position: absolute;
+  top: 90px;
+  left: 520gitpx;
+}
+
+.about__profile .image__frame {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 300px;
+  height: 25px;
+  background-color: rgba(49, 111, 146, 0.1);
+  border-radius: 10px 10px 0 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.profile__image .left {
+  display: flex;
+  gap: 5px;
+}
+
+.profile__image .left .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.profile__image .left .circle:nth-child(1) {
+  background-color: #E70012;
+}
+
+.profile__image .left .circle:nth-child(2) {
+  background-color: #F8B62A;
+}
+
+.profile__image .left .circle:nth-child(3) {
+  background-color: #23AC38;
+}
+
+.profile__image .right {
+  width: 40px;
+}
+
+.about__profile .profile__image .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile__info {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile__info > .detail {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+}
+
+.profile__name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.profile__birth {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(80, 70, 60, 0.7);
+}
+
+.profile__info .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile__info .contact > p {
+  font-size: 29px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.profile__info .contact .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(80, 70, 60, 0.7);
+}
+
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 100%;
+}
+
+.about__content p {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.about__details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about__details .left,
+.about__details .right {
+  width: 500px;
+}
+
+.about__details .left {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.about__details .title {
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 6px;
+}
+
+.about__details .con__list {
+  padding: 12px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.about__details .exception {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about__details .exception div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.about__details .left .exception > .ko {
+  font-size: 12px;
+}
+
+.about__details .con .ko {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(80, 70, 60, 0.7);
+  line-height: 1;
+}
+
+.about__details .con .en {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.about__skills .con__list > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 204px;
+}
+
+.about__skills .con__list .level {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+
+.about__skills .con__list .skills__level_2 span,
+.about__skills .con__list .skills__level_3 span {
+  display: flex;
+  background-color: #513B29;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.about__skills .con__list .skills__level_2 span:last-child {
+  background-color: rgba(80, 70, 60, 0.4);
+}
+
+.about__skills .con__list .skills__title {
+  color: rgba(80, 70, 60, 0.7);
 }

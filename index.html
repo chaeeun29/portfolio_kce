@@ -19,15 +19,238 @@
   <!-- 내 스크립트 -->
   <script src="js/script.js" defer></script>
 
-  <!-- font - Cormorant Garamond -->
+  <!-- font - Cormorant Garamond(en) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-  
+
+  <!-- font - 나눔명조(한글) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+  <!-- font - 노토 세리프(한글) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
-  <div class="sec cover">
-    가나다라마바사 abcdefg
-  </div>
+
+  <header>
+    <div class="header__inner">
+
+      <div class="header__logo">
+        <a href="#cover">
+          <img src="image/header/logo.svg" alt="로고">
+        </a>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#cover" class="is-active">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="cover" class="cover">
+
+      <a href="#about" class="cover__folder">
+        <img src="image/cover/folder.svg" alt="폴더">
+      </a>
+
+      <div class="cover__title">
+        <p class="title">
+          <span>(</span>
+          <span>2</span>
+          <span>0</span>
+          <span>2</span>
+          <span>6</span>
+          <span>)</span>
+          <span class="space"></span>
+          <span>P</span>
+          <span>O</span>
+          <span>R</span>
+          <span>T</span>
+          <span>F</span>
+          <span>O</span>
+          <span>L</span>
+          <span>I</span>
+          <span>O</span>
+        </p>
+      </div>
+    </section>
+    <section id="about" class="about">
+
+      <div class="about__profile">
+
+        <div class="profile__image">
+
+          <div class="image__frame">
+
+            <div class="left">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+
+            <div class="name en">
+              Kim Chae Eun
+            </div>
+
+            <div class="right"></div>
+          </div>
+
+          <div class="img-box">
+            <img src="image/about/profile.png" alt="프로필이미지">
+          </div>
+          
+        </div>
+
+        <div class="profile__info">
+          <div class="detail">
+            <p class="profile__name ko">김 채 은</p>
+            <p class="profile__birth ko">2001.04.29</p>
+          </div>
+
+          <div class="contact">
+            <p class="en">Contact</p>
+            <div class="detail">
+              <p class="contact__num ko">010.7922.1862</p>
+              <p class="contact__email ko">kimce0429@naver.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quote">
+        <img src="image/about/quote.svg" alt="따옴표">
+      </div>
+
+      <div class="about__content">
+        <p class="ko">사용자의 경험이 자연스럽게 이어질 수 있도록, <br>
+          감각과 구조를 함께 설계하는 웹 디자이너·퍼블리셔 김채은입니다.</p>
+
+        <div class="about__details">
+          <div class="left">
+
+            <div class="about__education">
+              <p class="title en">Education.</p>
+              <div class="con">
+                <div class="con__list">
+                  <p class="ko">대전여자고등학교 졸업</p>
+                  <p class="en">2020</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">한밭대학교 신소재공학과 졸업</p>
+                  <p class="en">2024</p>
+                </div>
+                <div class="con__list exception">
+                  <div>
+                    <p class="ko">SBS아카데미컴퓨터아트학원</p>
+                    <p class="en">2025</p>
+                  </div>
+                  <div class="detail ko">
+                    (챗GPT&AI를 활용한 UIUX 반응형 웹퍼블리셔 양성과정 수료 )
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about__skills">
+              <p class="title en">Skills.</p>
+              <div class="con">
+
+                <div class="con__list">
+                  <div class="illu">
+                    <div class="level skills__level_2">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">Adobe Illustrator</div>
+                  </div>
+                  <div class="photo">
+                    <div class="level skills__level_2">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">Adobe Photoshop</div>
+                  </div>
+                </div>
+
+                <div class="con__list">
+                  <div class="figma">
+                    <div class="level skills__level_3">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">Figma</div>
+                  </div>
+                  <div class="html">
+                    <div class="level skills__level_3">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">HTML</div>
+                  </div>
+                </div>
+                
+                <div class="con__list">
+                  <div class="figma">
+                    <div class=" level skills__level_3">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">CSS</div>
+                  </div>
+                  <div class="html">
+                    <div class="level skills__level_2">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="skills__title en">JS</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="right">
+
+            <div class="about__certification">
+              <p class="title en">Certification.</p>
+              <div class="con">
+                <div class="con__list">
+                  <p class="ko">웹디자인개발기능사</p>
+                  <p class="en">2025</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">그래픽기술자격(GTQ) 1급</p>
+                  <p class="en">2025</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">그래픽기술자격 일러스트(GTQi) 1급</p>
+                  <p class="en">2026</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">정보처리기사</p>
+                  <p class="en">2024</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">컴퓨터활용능력 1급</p>
+                  <p class="en">2024</p>
+                </div>
+                <div class="con__list">
+                  <p class="ko">2종보통 운전면허</p>
+                  <p class="en">2021</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects"></section>
+  </main>
 </body>
 </html>
