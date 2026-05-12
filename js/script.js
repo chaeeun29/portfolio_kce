@@ -27,3 +27,29 @@ window.addEventListener("scroll", () => {
   });
 
 });
+
+// 프로젝트 - 탭메뉴
+const tabs = document.querySelectorAll(".projects__nav button");
+const contents = document.querySelectorAll(".projects__content");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+
+    const target = tab.dataset.project;
+
+    tabs.forEach((tab) => {
+      tab.classList.remove("is-active");
+    });
+
+    contents.forEach((content) => {
+      content.classList.remove("is-active");
+    });
+
+    tab.classList.add("is-active");
+
+    document
+      .querySelector(`.projects__content[data-project="${target}"]`)
+      .classList.add("is-active");
+
+  });
+});
