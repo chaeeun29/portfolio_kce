@@ -317,6 +317,9 @@ section {
   display: flex;
   gap: var(--about-gap);
   position: relative;
+
+  padding-top: 60px;
+  padding-bottom: 120px;
 }
 
 .about__intro {
