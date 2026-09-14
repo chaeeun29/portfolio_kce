@@ -141,10 +141,10 @@ button {
   --projects-button-size: clamp(15px, 1vw, 20px);
 
 
-  --footer-message-en-size: clamp(42px, 3.6vw, 70px);
+  --footer-message-en-size: clamp(38px, 3.6vw, 70px);
   --footer-message-ko-size: clamp(18px, 1.3vw, 25px);
-  --footer-bottom-title-size: clamp(28px, 2.1vw, 40px);
-  --footer-bottom-detail-size: clamp(18px, 1.3vw, 25px);
+  --footer-bottom-title-size: clamp(26px, 2.1vw, 40px);
+  --footer-bottom-detail-size: clamp(17px, 1.3vw, 25px);
   --footer-message-gap: clamp(18px, 1.3vw, 25px);
 }
 
@@ -1140,8 +1140,41 @@ section {
     --projects-tag-gap: 6px;
   }
 
+   /* 페이지 넘길 때 윗 여백 조정 */
+  .cover {
+    gap: 60px;
+    padding: calc(70px + var(--header-height)) 24px 80px;
+  }
+
+  .about,
+  .projects {
+    padding: 70px 24px;
+  }
+
+  /* Projects 상단 원 크기 조정 */
+  .projects__frame {
+    padding: 12px 15px;
+  }
+
+  .projects__frame .left {
+    gap: 6px;
+  }
+
+  .projects__frame .left .circle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .projects__frame .right {
+    width: 42px;
+  }
+
   .projects__tags {
     gap: 6px;
+  }
+
+  .projects__tag-row {
+    justify-content: center;
   }
 
   .projects__tag {
@@ -1173,6 +1206,16 @@ section {
 
   .projects__nav button {
     min-height: 35px;
+  }
+
+  .projects__tag-row {
+    gap: 5px 4px;
+    justify-content: center;
+  }
+
+  .projects__tag {
+    padding: 4px 6px;
+    font-size: 11px;
   }
 
 }
