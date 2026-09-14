@@ -39,6 +39,7 @@ tabs.forEach((tab) => {
 
     tabs.forEach((tab) => {
       tab.classList.remove("is-active");
+      tab.setAttribute("aria-selected", "false");
     });
 
     contents.forEach((content) => {
@@ -46,6 +47,7 @@ tabs.forEach((tab) => {
     });
 
     tab.classList.add("is-active");
+    tab.setAttribute("aria-selected", "true");
 
     document
       .querySelector(`.projects__content[data-project="${target}"]`)
