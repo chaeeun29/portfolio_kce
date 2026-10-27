@@ -755,7 +755,28 @@ section {
   font-weight: 300;
   line-height: 1.7;
   letter-spacing: 0.02em;
+}
 
+.projects__contribution {
+  display: flex;
+  gap: clamp(6px, 0.63vw, 12px);
+  margin-top: clamp(12px, 1,04vw, 20px);
+  font-size: clamp(12px, 0.73vw, 14px);
+  line-height: 1.6;
+}
+
+.projects__contribution-label {
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.projects__contribution-desc {
+  margin: 0;
+   word-break: keep-all;
+}
+
+.projects__contribution-rate {
+  white-space: nowrap;
 }
 
 .projects__cta {
